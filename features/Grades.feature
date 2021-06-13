@@ -34,19 +34,3 @@ When: Eu solicito a média do aluno “Matheus”
 Then: Eu continuo na página “Notas”
 And: Eu vejo o aluno “Matheus” está com as notas “8, 9 ,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
 And: Eu vejo a média do aluno “Matheus” com a nota “9”
-
-
-Scenario: Falha ao adicionar notas de usuário
-Given: Eu estou na página "Notas" do aluno "Matheus"
-And: Eu coloco as notas “8,9, a” para as seguintes provas: “Primeira prova, Segunda Prova, Terceira Prova”
-And: Eu salvo as minhas alterações
-Then: Eu vejo uma mensagem de erro
-And: Continuo na página "Notas" do aluno "Matheus"
-
-Scenario: Falha ao editar notas de usúario
-And: O aluno “Matheus está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
-When: Eu edito as notas do aluno “Matheus” para “8,10,a” nas provas “Primeira Prova, Segunda Prova e Terceira Prova”
-And: Eu salvo as minhas alterações
-Then: Eu vejo uma mensagem de erro
-And: Eu continuo na página “Notas”
-And:  Eu vejo o aluno “Matheus” está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
