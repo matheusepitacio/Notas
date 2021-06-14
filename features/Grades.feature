@@ -50,4 +50,4 @@ When: Eu edito as notas do aluno “Matheus” para “8,10,a” nas provas “P
 And: Eu salvo as minhas alterações
 Then: Eu vejo uma mensagem de erro
 And: Eu continuo na página “Notas”
-And:  Eu vejo o aluno “Matheus” está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
+And: Eu vejo o aluno “Matheus” está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
