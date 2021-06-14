@@ -44,9 +44,17 @@ Then: Eu vejo uma mensagem de erro
 And: Continuo na página "Notas" do aluno "Matheus"
 
 Scenario: Falha ao editar notas de usúario
-And: O aluno “Matheus está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
+Given: Eu estou na página "Notas" do aluno "Matheus"
+And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
 When: Eu edito as notas do aluno “Matheus” para “8,10,a” nas provas “Primeira Prova, Segunda Prova e Terceira Prova”
 And: Eu salvo as minhas alterações
 Then: Eu vejo uma mensagem de erro
 And: Eu continuo na página “Notas”
 And:  Eu vejo o aluno “Matheus” está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
+
+Scenario: Aluno tenta acessar página sem autorização
+Given: Eu estou na página "Notas"
+And: Eu estou logado como "aluno"
+When: Eu tento acessar as notas do um aluno "Matheus"
+Then: Eu vejo uma mensagem de erro
+And: Eu sou redirecionado para a página "Início"
