@@ -13,7 +13,7 @@ And: E vejo o aluno “Matheus” está com as notas “8,9,10” para as provas
 
 Scenario: Editar notas de usuário
 Given: Eu estou na página “Notas”
-And: O aluno “Matheus está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
+And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
 When: Eu edito as notas do aluno “Matheus” para “8,10,10” nas provas “Primeira Prova, Segunda Prova e Terceira Prova”
 And: Eu salvo as minhas alterações
 Then: Eu continuo na página “Notas”
@@ -21,7 +21,7 @@ And:  Eu vejo o aluno “Matheus” está com as notas “8,10,10” para as pro
 
 Scenario: Excluir notas de usúario
 Given: Eu estou na página “Notas”
-And: O aluno “Matheus está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
+And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
 When: Eu excluo a nota do aluno “Matheus” para a “Segunda Prova”
 And: Eu salvo as minhas alterações
 Then: Eu continuo na página “Notas”
@@ -29,7 +29,7 @@ And: Eu vejo o aluno “Matheus” está com as notas “8, - ,10” para as pro
 
 Scenario: Cálculo de Média
 Given: Eu estou na página “Notas”
-And: O aluno “Matheus está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
+And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
 When: Eu solicito a média do aluno “Matheus”
 Then: Eu continuo na página “Notas”
 And: Eu vejo o aluno “Matheus” está com as notas “8, 9 ,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
@@ -44,7 +44,8 @@ Then: Eu vejo uma mensagem de erro
 And: Continuo na página "Notas" do aluno "Matheus"
 
 Scenario: Falha ao editar notas de usúario
-And: O aluno “Matheus está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
+Given: Eu estou na página "Notas" do aluno "Matheus"
+And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
 When: Eu edito as notas do aluno “Matheus” para “8,10,a” nas provas “Primeira Prova, Segunda Prova e Terceira Prova”
 And: Eu salvo as minhas alterações
 Then: Eu vejo uma mensagem de erro
