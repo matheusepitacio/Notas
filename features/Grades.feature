@@ -70,3 +70,5 @@ And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Prime
 
 
 Adicionando linha para commit do roteiro
+
+Adicionando linha para commit do roteiro
