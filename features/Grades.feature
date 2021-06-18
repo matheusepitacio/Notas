@@ -50,7 +50,7 @@ Feature: Grades
         And: Eu salvo as minhas alterações
         Then: Eu vejo uma mensagem de erro
         And: Eu continuo na página “Notas”
-        And: Eu vejo o aluno “Matheus” está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
+        And:  Eu vejo o aluno “Matheus” está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
 
     Scenario: Aluno tenta acessar página sem autorização
         Given: Eu estou na página "Notas"
@@ -62,10 +62,11 @@ Feature: Grades
     Scenario: Professor tenta adicionar notas de aluno que já tem notas
         Given: Eu estou na página “Cadastrar Notas” de aluno “Matheus”
         And: Eu estou logado como “Professor”
-        And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Prova Final"
-        When: Eu coloco as notas “10,7,8” para as seguintes provas: “Primeira prova, Segunda Prova, Prova Final”
+        And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
+        When: Eu coloco as notas “10,7,8” para as seguintes provas: “Primeira prova, Segunda Prova, Terceira Prova”
         Then: Eu recebo uma mensagem avisando que o aluno já tem nota
         And: Eu sou redirecionado para a página a Página "Notas"
-        And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Prova Final"
+        And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
 
 
+Adicionando linha para novo commit 
