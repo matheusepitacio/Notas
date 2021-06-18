@@ -68,7 +68,3 @@ Feature: Grades
         And: Eu sou redirecionado para a página a Página "Notas"
         And: O aluno “Matheus" está com as notas “8,9,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
 
-
-Adicionando linha para novo commit 
-
-Adicionando linha para novo commit
