@@ -34,4 +34,4 @@ Then: Uma mensagem de erro aparece na tela
 And: O espaço "Nota 1" continuará com "8,5" alocado
 And Os espaços "Nota 2" e "Nota 3" continuaram com notas "9,0" e "7,5" respectivamente
 
-Novo commit no branch main
+Novo commit no branch main aqui
