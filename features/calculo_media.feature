@@ -11,3 +11,4 @@ And ele tem os conceitos "MANA", "MANA" e "-"
 When eu informo "MANA" para o conceito faltante
 Then é registrado no sistema os conceitos "MANA", "MANA" e "MANA" para o aluno "João"
 And a média dele aparece como "0"
+And o status dele aparece como "reprovado"
