@@ -15,3 +15,4 @@ When Eu realizo o cálculo da média de “João”
 Then Uma mensagem de erro aparece na tela referente a nota que falta
 And Eu ainda estou na página de “Notas”
 And Eu vejo as notas “8” para a “Prova 1”, “9” para a “Prova 2” e o campo da “Prova 3” em branco para o aluno “João”
+Then Eu posso adicionar a nota que está faltando para a "Prova 3" do aluno "João"
