@@ -16,8 +16,7 @@ When: O professor preenche a nota do espaço "Nota 1" com "Lrt"
 Then: Uma mensagem de erro aparece na tela
 And: O espaço "Nota 1" continuará vazio
 And: Os espaços "Nota 2", "Nota 3" continuam sem nota alocada
-And: O espaço "Media" continua vazio
-And: Passo extra adicionado 
+And: O espaço "Media" continua vazio 
 
 Scenery: Atualização de Nota bem sucedida
 Given: O professor esta na página "Notas" do aluno "Pedro" 
