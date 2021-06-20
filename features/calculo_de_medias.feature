@@ -32,8 +32,4 @@ And O aluno “Luiz” está com as notas “10” para a “Prova 1”, a nota 
 When Eu realizo o cálculo da média de “Luiz”
 Then Uma mensagem de erro aparece na tela referente a nota que falta
 And Eu ainda estou na página de “Notas”
-<<<<<<< HEAD
 And Eu vejo as notas “10” para a “Prova 1”, o campo de nota da “Prova 2” em branco e "9" para “Prova 3” para o aluno “Luiz”
-=======
-And Eu vejo as notas “10” para a “Prova 1”, o campo da prova “Prova 2” faltando e "9" para “Prova 3” para o aluno “Luiz”
->>>>>>> desenvolvimento
