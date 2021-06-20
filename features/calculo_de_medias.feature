@@ -16,7 +16,7 @@ Then Uma mensagem de erro aparece na tela referente a nota que falta
 And Eu ainda estou na página de “Notas”
 And Eu vejo as notas “8” para a “Prova 1”, “9” para a “Prova 2” e o campo da “Prova 3” em branco para o aluno “João”
 
-Gui Scenario
+Gui Scenario:
 Scenario: Calculando a Média
 Given Eu estou na página de "Notas"
 And O aluno "José" está com as notas "5" para a "Prova 1", "8' para a "Prova 2" e "8,6" para a "Prova 3"
@@ -25,7 +25,7 @@ Then Eu continuo na página de "Notas"
 And Eu vejo as notas "5" para a "Prova", "8" para a "Prova 2" e "8,6" para a "Prova 3"
 And Eu vejo a média "7,2" do aluno "José"
 
-Gui Scenario
+Gui Scenario:
 Scenario: Calculando a Média inválida
 Given Eu estou na página “Notas”
 And O aluno “Luiz” está com as notas “10” para a “Prova 1”, a nota da “Prova 2” está faltando e "9" para a “Prova 3" 
