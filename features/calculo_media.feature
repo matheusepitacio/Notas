@@ -7,7 +7,7 @@ And a média dele aparece como "10"
 And o status dele aparece como "aprovado"
 
 Scenario: Nota mínima
-Given eu tenho o aluno "João" com o cpf "456"
+Given eu tenho o aluno "João" com o cpf "147"
 And ele tem os conceitos "MANA", "MANA" e "-"
 When eu informo "MANA" para o conceito faltante
 Then é registrado no sistema os conceitos "MANA", "MANA" e "MANA" para o aluno "João"
