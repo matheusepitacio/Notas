@@ -1,7 +1,7 @@
 Feature: Manutenção de Notas
 
 As a teacher
-I want to do the update of grades
+I want to do the update of the grades
 So that i can maint the records of my students
 
 Scenario: Remoção de notas
@@ -11,7 +11,7 @@ And eu vejo 7, 6, 4, 8 nos campos “Prova 1”, “Prova 2”, “Prova 3” e 
 When eu clico no campo “Prova 3”
 And eu clico em “Remover”
 Then eu vejo uma mensagem “Remoção bem-sucedida”
-And eu vejo a página de notas do aluno “Mauro” com o campo “Prova 3” em branco
+And eu vejo a página de notas do aluno “Mauro” com o campo “Prova 3” vazio
 
 Scenario: Remoção de notas
 Given eu sou um professor
