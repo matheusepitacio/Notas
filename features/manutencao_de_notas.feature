@@ -19,7 +19,7 @@ And eu estou na página de notas do aluno “Mauro”
 And eu vejo 7, 6, 8 nos campos  “Prova 1”, “Prova 2”, “Prova 4”, respectivamente
 And eu vejo o campo “Prova 3” em branco
 When eu clico no campo “Prova 3”
-Then eu vejo a opção “Remover” indisponível
+Then eu vejo a opção “Remover” não disponível
 
 Scenario: Inserção bem sucedida de nota
 Given O professor está na página notas do aluno "Pedro" 
