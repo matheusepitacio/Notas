@@ -34,3 +34,10 @@ And "Pedro" não tem nota alocada no espaço "Prova 1"
 When O professor preenche a nota do espaço "Prova 1" com "Lrt"
 Then Uma mensagem de erro  com “Nota Inválida” aparece na tela
 And O espaço "Prova 1" continuará vazio
+
+Scenario: Atualização de Nota 
+Given O professor está na página "Notas" do aluno "Pedro" 
+And "Pedro" tem nota "8,5" alocada no espaço "Nota 1"
+When O professor atualiza a nota do espaço "Nota 1" com "9,0"
+Then Ele continuará na página de "Notas"
+And A nota "9,0" estará alocada ao espaço "Nota 1"
