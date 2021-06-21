@@ -25,7 +25,7 @@ Scenario: Inserção bem sucedida de nota
 Given O professor está na página notas do aluno "Pedro" 
 And "Pedro" não tem notas alocadas no espaço "Prova 1"
 When O professor preenche a nota do espaço "Prova 1" com "8,5"
-Then Ele continua na página de notas
+Then Ele permanece na página de notas
 And A nota "8,5" está alocada ao espaço "Prova 1"
 
 Scenario: Inserção de nota inválida
