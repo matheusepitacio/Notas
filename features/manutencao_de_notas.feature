@@ -48,4 +48,4 @@ Given O professor está na página "Notas" do aluno "Pedro"
 And "Pedro" tem nota "8,5" alocada no espaço "Nota 1"
 When O professor atualiza a nota do espaço "Nota 1" com "Lrt"
 Then Uma mensagem de erro aparece na tela
-And O espaço "Nota 1" continuará com "8,5" alocado
+And O espaço "Nota 1" continuará com "8,5" escrito
