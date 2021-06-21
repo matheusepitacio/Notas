@@ -34,3 +34,4 @@ And "Pedro" não tem nota alocada no espaço "Prova 1"
 When O professor preenche a nota do espaço "Prova 1" com "Lrt"
 Then Uma mensagem de erro  com “Nota Inválida” aparece na tela
 And O espaço "Prova 1" continuará vazio
+And nenhuma outra nota foi alterada
