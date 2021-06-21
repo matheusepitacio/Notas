@@ -51,9 +51,9 @@ Then Uma mensagem de erro aparece na tela
 And O espaço "Nota 1" continuará com "8,5" escrito
 
 Scenario: Cálculo de Média
-Given: Eu estou na página “Notas”
-And: O aluno “Matheus” está com as notas “8,9,10” para as provas “Primeira Prova”, “Segunda Prova” e “Terceira Prova”
-When: Eu solicito a média do aluno “Matheus”
-Then: Eu continuo na página “Notas”
-And: Eu vejo o aluno “Matheus” está com as notas “8, 9 ,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
-And: Eu vejo a média do aluno “Matheus” com a nota “9”
+Given Eu estou na página “Notas”
+And O aluno “Matheus” está com as notas “8,9,10” para as provas “Primeira Prova”, “Segunda Prova” e “Terceira Prova”
+When Eu solicito a média do aluno “Matheus”
+Then Eu continuo na página “Notas”
+And Eu vejo o aluno “Matheus” está com as notas “8, 9 ,10” para as provas “Primeira Prova, Segunda Prova e Terceira Prova”
+And Eu vejo a média do aluno “Matheus” com a nota “9”
