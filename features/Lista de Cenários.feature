@@ -23,6 +23,14 @@ Scenery: Inserção de nota mal sucedida
     And: Os espaços "Prova 2", "Prova 3" continuam sem nota alocada
     And: O espaço "Media" continua vazio 
 
+Scenario: Inserção de notas em branco
+    Given o professor está na página "Notas" do aluno "Pedro"
+    And "Pedro" não tem notas alocadas no espaço "Prova 1", "Prova 2" e "Prova 3"
+    When o professor confirma a inserção de todas as notas
+    Then um mensagem de erro aparece na tela
+    And o professor continuará na página "Notas" do aluno "Pedro"
+    And os espaços "Prova 1", "Prova 2" e "Prova 3" continumam sem notas
+
 Scenery: Atualização de Nota bem sucedida
     Given: O professor esta na página "Notas" do aluno "Pedro" 
     And: "Pedro" tem nota "8,5" alocada no espaço "Prova 1", "9,0" no espaço "Prova 2" e "7,5" no espaço "Prova 3"
@@ -38,6 +46,15 @@ Scenery: Atualização de Nota mal sucedida
     Then: Uma mensagem de erro aparece na tela
     And: O espaço "Nota 1" continuará com "8,5" alocado
     And Os espaços "Prova 2" e "Prova 3" continuaram com notas "9,0" e "7,5" respectivamente
+
+Scenario: Atualização de Nota em branco
+    Given o professor está na página "Notas" do aluno "Pedro"
+    And "Pedro" tem nota "8,5" alocada no espaço "Prova 1", "9,0" no espaço "Prova 2" e "7,5" no espaço "Prova 3"
+    When O professor apaga a nota do espaço "Prova 1", "Prova 2" e "Prova 3"
+    And confirma a atualização
+    Then uma mensagem de erro aparece na tela
+    And and o professor continuará na página "Notas" do aluno "Pedro"
+    And nenhuma mudança foi feita nas notas dos espaços "Prova 1", "Prova 2" e "Prova 3"
 
 Scenario: Cálculo de Média bem sucedido
     Given: O professor está na página “Notas” do aluno "Matheus"
