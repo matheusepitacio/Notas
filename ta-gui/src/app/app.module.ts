@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { MetasComponent } from './metas.component';
 import { AlunosComponent } from './alunos.component';
 import { AlunoService } from './aluno.service';
+import { NotasComponent } from './notas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MetasComponent,
-    AlunosComponent
+    AlunosComponent,
+    NotasComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,10 @@ import { AlunoService } from './aluno.service';
       {
         path: 'alunos',
         component: AlunosComponent
+      },
+      {
+        path: 'notas',
+        component: NotasComponent 
       }
     ])
   ],
