@@ -34,6 +34,7 @@ taserver.post('/aluno', function (req: express.Request, res: express.Response) {
 
 taserver.put('/aluno', function (req: express.Request, res: express.Response) {
   var aluno: Aluno = <Aluno> req.body;
+  console.log(aluno);
   aluno = cadastro.atualizar(aluno);
   if (aluno) {
     res.send({"success": "O aluno foi atualizado com sucesso"});
