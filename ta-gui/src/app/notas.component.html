@@ -12,8 +12,8 @@
     <td>{{a.nome}}</td>
     <td>{{a.cpf}}</td>
     <td>{{a.email}}</td>
-    <td class="nota">
-       <input [(ngModel)]="a.notas['nota1']" (change)="atualizarAluno(a)" type="number" step="0.01" max="10" min="0">
+     <td class="nota">
+       <input [(ngModel)]="a.notas['nota1']" (change)="atualizarAluno(a)" type="number" step="0.01" max="10" min="0" id="{{a.cpf}} nota1">
        <button (click)="removerNota(a,'nota1')">Remover</button>
     </td>
     <td class="nota">

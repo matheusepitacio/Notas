@@ -21,14 +21,13 @@ import { AlunoService } from './aluno.service';
          (msg) => { alert(msg.message); }
       );
     }
-
+    
     removerNota(aluno: Aluno, nota: string): void{
       aluno.notas[nota] = null;
       this.alunoService.atualizar(aluno).subscribe(
         (a) => { if (a == null) alert("Unexpected fatal error trying to update student information! Please contact the systems administratos."); },
         (msg) => { alert(msg.message); }
      );
-     alert('Nota removida com sucesso!');
     }
 
     ngOnInit(): void {
