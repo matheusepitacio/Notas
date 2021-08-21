@@ -1,20 +1,23 @@
 <table>
- <tr>
-    <th>Nome</th>
-    <th>CPF</th>
-    <th>e-mail</th>
-    <th>Nota 1</th>
-    <th>Nota 2</th>
-    <th>Nota 3</th>
-    <th>Média</th>
- </tr>
- <tr *ngFor="let a of alunos">
-    <td>{{a.nome}}</td>
-    <td>{{a.cpf}}</td>
-    <td>{{a.email}}</td>
-    <td class="nota"><input [(ngModel)]="a.notas['nota1']" (change)="atualizarAluno(a)" type="number" step="0.01" max="10" min="0"></td>
-    <td class="nota"><input [(ngModel)]="a.notas['nota2']" (change)="atualizarAluno(a)" type="number" step="0.01" max="10" min="0"></td>
-    <td class="nota"><input [(ngModel)]="a.notas['nota3']" (change)="atualizarAluno(a)" type="number" step="0.01" max="10" min="0"></td>
-    <td class="nota"><input [(ngModel)]="a.notas['media']" (change)="atualizarAluno(a)" type="number" step="0.01" max="10" min="0"></td>
- </tr>
- </table>
+   <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>e-mail</th>
+      <th>Nota 1</th>
+      <th>Nota 2</th>
+      <th>Nota 3</th>
+      <th>Média</th>
+   </tr>
+   <tr *ngFor="let a of alunos">
+      <td>{{a.nome}}</td>
+      <td>{{a.cpf}}</td>
+      <td>{{a.email}}</td>
+      <td class="nota"><input [(ngModel)]="a.notas['nota1']" (change)="atualizarAluno(a)" type="number"
+            step="0.01" max="10" min="0"></td>
+      <td class="nota"><input [(ngModel)]="a.notas['nota2']" (change)="atualizarAluno(a)" type="number" step="0.01"
+            max="10" min="0"></td>
+      <td class="nota"><input [(ngModel)]="a.notas['nota3']" (change)="atualizarAluno(a)" type="number" step="0.01"
+            max="10" min="0"></td>
+      <td>{{a.media}}</td>
+   </tr>
+</table>

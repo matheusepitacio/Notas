@@ -16,7 +16,7 @@ export class Aluno {
     this.email = "";
     this.metas = new Map<string, string>();
     this.notas = new Map<string, number>();
-    this.media = undefined;
+    this.media = this.calculaMedia();
   }
 
   clone(): Aluno {
@@ -31,7 +31,7 @@ export class Aluno {
     this.email = from.email;
     this.copyMetasFrom(from.metas);
     this.copyNotasFrom(from.notas);
-    this.media = from.media;
+    this.media = this.calculaMedia();
   }
 
   copyMetasFrom(from: Map<string, string>): void {
@@ -60,7 +60,6 @@ export class Aluno {
     } else {
       media = media / unidades;
     }
-    this.media = media;
     return media;
   }
 }
