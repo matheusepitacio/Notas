@@ -24,6 +24,6 @@
        <input [(ngModel)]="a.notas['nota3']" (change)="atualizarAluno(a)" type="number" step="0.01" max="10" min="0">
        <button (click)="removerNota(a,'nota3')">Remover</button>
     </td>
-    <td class="nota">{{a.media}}</td>
+    <td class="nota" type="number" step="0.01" max="10" min="0">{{a.media}}</td>
  </tr>
  </table>

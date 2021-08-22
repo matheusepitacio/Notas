@@ -4,7 +4,7 @@ export class Aluno {
   email: string;
   metas: Map<string, string>;
   notas: Map<string, number>;
-  media: number;
+  media: string;
 
   constructor() {
     this.clean();
@@ -44,22 +44,32 @@ export class Aluno {
   copyNotasFrom(from: Map<string, number>): void {
     this.notas = new Map<string, number>();
     for (let key in from) {
+      if (from[key] > 10) {
+        from[key] = 10;
+      } else if (from[key] < 0) {
+        from[key] = 0;
+      }
       this.notas[key] = from[key];
     }
   }
 
-  calculaMedia(): number {
+  calculaMedia(): string {
     var media: number = 0.0;
+    var incompleto: boolean = false;
     var unidades: number = 0;
+    var resp: string = '';
     for (let key in this.notas) {
+      if (this.notas[key] == null) {
+        incompleto = true;
+      }
       media += this.notas[key];
       unidades++;
     }
-    if (unidades == 0) {
+    if (unidades < 3 || incompleto) {
       media = undefined;
     } else {
-      media = media / unidades;
+      resp = (media / unidades).toFixed(2);
     }
-    return media;
+    return resp;
   }
 }
