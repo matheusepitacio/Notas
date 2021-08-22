@@ -66,7 +66,7 @@ export class Aluno {
       unidades++;
     }
     if (unidades < 3 || incompleto) {
-      media = undefined;
+      resp = undefined;
     } else {
       resp = (media / unidades).toFixed(2);
     }
