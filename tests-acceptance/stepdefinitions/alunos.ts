@@ -21,6 +21,10 @@ async function cadastrarNota(cpf, notanumber, nota)  {
     await element(by.id(`${cpf} ${notanumber}`)).sendKeys(<number> nota);
 }       
 
+async function removerNota(cpf, notanumber){
+   await element(by.id(`${cpf} ${notanumber} buttonremover`)).click();
+}
+
 async function assertGradeNull(cpf, notanumber) {
     const currentGrade = await element(by.id(`${cpf} ${notanumber}`)).getAttribute('value')
     expect(currentGrade).to.equal('')
@@ -121,6 +125,28 @@ defineSupportCode(function ({ Given, When, Then }) {
                      .then(body => expect(body.includes(resposta)).to.equal(true));
     });
     
-    
+    Given(/^I am in grades page$/, async () => {
+        await browser.get("http://localhost:4200/");
+        await expect(browser.getTitle()).to.eventually.equal('TaGui');
+        await $("a[name='notas']").click();
+    });
+
+    Given(/^I see a student with CPF "(\d*)" in the grades list$/, async (cpf) => {
+        await $("a[name='alunos']").click();
+        await criarAluno("Priscilla",cpf);
+        await $("a[name='notas']").click(); 
+    });
+
+    Given(/^I see the value "(\d*)" in "([^\"]*)" space for the student with CPF "(\d*)"$/, async (nota, notanumber,cpf) => {
+        await cadastrarNota(cpf, notanumber, nota);
+    });
+
+    When(/^I try to remove the grade in the "([^\"]*)" space for the student with CPF "(\d*)"$/, async (notanumber,cpf) => {
+        await removerNota(cpf, notanumber);
+    });
+
+    Then(/^I cannot see any grade in the "([^\"]*)" for the student with CPF "(\d*)"$/, async (notanumber, cpf) => {
+        await assertGradeNull(cpf, notanumber);
+    });
 
 })
