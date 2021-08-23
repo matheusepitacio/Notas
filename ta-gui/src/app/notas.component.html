@@ -15,15 +15,23 @@
       <td class="nota">
          <input [(ngModel)]="a.notas['nota1']" (change)="a.media=atualizarAluno(a)" type="number" step="0.01" max="10" min="0"
             id="{{a.cpf}} nota1">
-         <button (click)="a.media=removerNota(a,'nota1')">Remover</button>
+         <div *ngIf="a.notas['nota1']!=null">
+            <button (click)="a.media=removerNota(a,'nota1')" id="{{a.cpf}} nota1 buttonremover">Remover</button>
+         </div>  
       </td>
       <td class="nota">
-         <input [(ngModel)]="a.notas['nota2']" (change)="a.media=atualizarAluno(a)" type="number" step="0.01" max="10" min="0">
-         <button (click)="a.media=removerNota(a,'nota2')">Remover</button>
+         <input [(ngModel)]="a.notas['nota2']" (change)="a.media=atualizarAluno(a)" type="number" step="0.01" max="10" min="0" 
+            id="{{a.cpf}} nota2">
+         <div *ngIf="a.notas['nota2']!=null">
+            <button (click)="a.media=removerNota(a,'nota2')" id="{{a.cpf}} nota2 buttonremover">Remover</button>
+         </div>  
       </td>
       <td class="nota">
-         <input [(ngModel)]="a.notas['nota3']" (change)="a.media=atualizarAluno(a)" type="number" step="0.01" max="10" min="0">
-         <button (click)="a.media=removerNota(a,'nota3')">Remover</button>
+         <input [(ngModel)]="a.notas['nota3']" (change)="a.media=atualizarAluno(a)" type="number" step="0.01" max="10" min="0" 
+            id="{{a.cpf}} nota3">
+         <div *ngIf="a.notas['nota3']!=null">
+            <button (click)="a.media=removerNota(a,'nota3')" id="{{a.cpf}} nota3 buttonremover">Remover</button>
+         </div>  
       </td>
       <td class="nota" name="mediaText">{{a.media}}</td>
    </tr>
